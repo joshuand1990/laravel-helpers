@@ -14,7 +14,8 @@
   "autoload": {
     "psr-4": {
       "Joshua\\Helpers\\": "src/"
-    }
+    },
+    "files": [ "src/functions.php" ]
   },
   "minimum-stability": "stable"
 }
