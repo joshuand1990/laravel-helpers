@@ -8,30 +8,28 @@
 
 namespace Joshua\Helpers;
 
-
 trait ConsoleHelper
 {
-    public function inform($message)
+    public static function inform($message)
     {
-        return $this->runInConsoleMessage($message . PHP_EOL);
+        static::runInConsoleMessage($message . PHP_EOL);
     }
-    public function speak($message)
+    public static function speak($message)
     {
-        return $this->runInConsoleMessage($message);
+         static::runInConsoleMessage($message);
     }
-    public function mumble($message)
+    public static function mumble($message)
     {
-        return $this->runInConsoleMessage(strtolower($message));
+         static::runInConsoleMessage(strtolower($message));
     }
-    public function announce($message)
+    public static function announce($message)
     {
-        return $this->runInConsoleMessage(strtoupper($message));
+         static::runInConsoleMessage(strtoupper($message));
     }
-    public function runInConsoleMessage($message)
+    public static function runInConsoleMessage($message)
     {
         if(app()->runningInConsole()) {
             print $message;
         }
-        return $this;
     }
 }
