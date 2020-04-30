@@ -13,11 +13,12 @@ trait NameOfTableTrait
 {
     /**
      * @param null $column
+     * @param null $as
      * @return string
      */
-    public static function tableName($column = null)
+    public static function tableName($column = null, $as = null)
     {
-        if(! method_exists($me, 'getTable')) {
+        if(! method_exists($me = new static, 'getTable')) {
             trigger_error("getTable doesnt exist");
         }
 
