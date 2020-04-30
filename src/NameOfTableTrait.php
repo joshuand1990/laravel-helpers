@@ -17,13 +17,20 @@ trait NameOfTableTrait
      */
     public static function tableName($column = null)
     {
-        $me = new static();
-
         if(! method_exists($me, 'getTable')) {
             trigger_error("getTable doesnt exist");
-            return;
         }
 
-        return is_null($column) ? $me->getTable() : "{$me->getTable()}.{$column}";
+        $name = $me->getTable();
+
+        if(!is_null($column)) {
+            $name = sprintf("%s.%s", $name, $column);
+        }
+
+        if(!is_null($as)) {
+            $name = sprintf("%s as %s", $name, $as);
+        }
+
+        return $name;
     }
 }

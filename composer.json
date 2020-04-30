@@ -16,7 +16,10 @@
     "psr-4": {
       "Joshua\\Helpers\\": "src/"
     },
-    "files": [ "src/functions.php" ]
+    "files": [ 
+      "src/functions.php", 
+      "src/console.php" 
+    ]
   },
   "minimum-stability": "stable"
 }
