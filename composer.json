@@ -4,8 +4,8 @@
   "require": {
     "joshuand1990/excel-helper": "*",
     "joshuand1990/form-helper": "*",
-    "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x",
-    "illuminate/console": "5.5.x|5.6.x|5.7.x|5.8.x"
+    "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x|6.x.x",
+    "illuminate/console": "5.5.x|5.6.x|5.7.x|5.8.x|6.x.x"
   },
   "authors": [
     {
